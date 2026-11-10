@@ -1,9 +1,25 @@
-{% if latest_question_list %}
+<!doctype html>
+<html lang="fr-FR">
+
+<head>
+    <meta charset="utf-8" />
+    <title>index</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'polls/style.css' %}">
+</head>
+
+<body>
+     <h1>Sommaire</h1>
+    {% if latest_question_list %}
     <ul>
-    {% for question in latest_question_list %}
-        <li><a href="{% url 'polls:detail' question.id %}"> {{ question.question_text }} </a></li>
+        {% for question in latest_question_list %}
+        <li><a href="{% url 'polls:detail' question.id %}"> {{ question.question_text }} - {{question.pub_date}} </a></li>
     {% endfor %}
     </ul>
-{% else %}
+    {% else %}
     <p>No polls are available.</p>
-{% endif %}
+    {% endif %}
+    <a href="{% url 'polls:add' %}">Add a question</a>
+</body>
+
+</html>
