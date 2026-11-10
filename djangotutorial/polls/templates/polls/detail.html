@@ -1,4 +1,15 @@
-<form action="{% url 'polls:vote' question.id %}" method="post">
+
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>detail</title>
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'polls/style.css' %}">
+  </head>
+  <body>
+     <h1>Détail de la question</h1>
+   <form action="{% url 'polls:vote' question.id %}" method="post">
     {% csrf_token %}
     <fieldset>
         <legend><h1>{{ question.question_text }}</h1></legend>
@@ -11,4 +22,6 @@
         {% endfor %}
     </fieldset>
     <input type="submit" value="Vote">
-</form>question.id %
+</form> 
+  </body>
+</html>
