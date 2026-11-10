@@ -1,7 +1,8 @@
 # Python
-__pycache__/
+/__pycache__/
 *.py[cod]
 *.pyo
+*.pyc
 
 # Environnement virtuel
 venv/
