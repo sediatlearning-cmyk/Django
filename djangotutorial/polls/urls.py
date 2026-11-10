@@ -1,6 +1,5 @@
-from django.urls import include, path
-from debug_toolbar.toolbar import debug_toolbar_urls
-
+from django.urls import path
+from django.conf import settings
 
 from . import views
 app_name = "polls"
@@ -23,4 +22,4 @@ urlpatterns = [
     path('add/', views.add, name='add'),
     # ex: /polls/confirm_add
     path('confirm_add/', views.confirm_add, name='confirm_add'),
-    ] + debug_toolbar_urls()
+    ] 
