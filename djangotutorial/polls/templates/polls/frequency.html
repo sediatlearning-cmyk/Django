@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>detail</title>
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'polls/style.css' %}">
+  </head>
+  <body>
+    <h1>{{ question.question_text }}</h1>
+    <ul>
+    {% for choice in choices %}
+    <li>
+    {{ choice.0 }} –
+    {{ choice.1 }} vote{{ choice.1|pluralize }} –
+    {{ choice.2 }}
+    </li>
+    {% endfor %}
+    </ul>
+    <p><a href="{% url 'polls:all' %}">Retour aux sondages</a></p>
+  </body>
+</html>
