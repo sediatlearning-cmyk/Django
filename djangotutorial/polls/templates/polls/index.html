@@ -13,13 +13,16 @@
     {% if latest_question_list %}
     <ul>
         {% for question in latest_question_list %}
-        <li><a href="{% url 'polls:detail' question.id %}"> {{ question.question_text }} - {{question.pub_date}} </a></li>
-    {% endfor %}
+        <li>({{question.pub_date}}) :
+            <a href="{% url 'polls:vote' question.id %}">
+                 {{ question.question_text }}
+            </a>
+        </li>
+        {% endfor %}
     </ul>
     {% else %}
     <p>No polls are available.</p>
     {% endif %}
     <a href="{% url 'polls:add' %}">Add a question</a>
 </body>
-
 </html>

@@ -7,7 +7,7 @@ urlpatterns = [
     # ex: /polls/
     path("", views.IndexView.as_view(), name="index"),
     # ex: /polls/1/detail
-    path("<int:pk>/detail/", views.DetailView.as_view(), name="detail"),
+    #path("<int:pk>/detail/", views.DetailView.as_view(), name="detail"),
     # ex: /polls/1/results
     path("<int:pk>/results/", views.ResultsView.as_view(), name="results"),
     # ex: /polls/1/vote
@@ -21,5 +21,5 @@ urlpatterns = [
     # ex: /polls/add
     path('add/', views.add, name='add'),
     # ex: /polls/confirm_add
-    path('confirm_add/', views.confirm_add, name='confirm_add'),
+    #path('confirm_add/', views.confirm_add, name='confirm_add'),
     ] 
