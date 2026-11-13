@@ -1,12 +1,3 @@
-<!doctype html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8" />
-    <title>detail</title>
-     {% load static %}
-    <link rel="stylesheet" href="{% static 'polls/style.css' %}">
-  </head>
-  <body>
     <h1>Statistiques</h1>
     <p>Nombre de sondages : {{ nbr_sondages }}</p>
     <p>Nombre de choix : {{ nbr_choix }}</p>
@@ -18,5 +9,3 @@
         {{ question_la_moins_populaire }}</p>
     <p>dernière question : {{ derniere_question }}</p>
     <p><a href="{% url 'polls:index' %}">index</a></p>    
-  </body>
-</html>

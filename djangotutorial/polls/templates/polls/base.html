@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+<head>
+    <meta charset="utf-8" />
+    <title>{% block title %}Polls{% endblock %}</title>
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'polls/style.css' %}">
+</head>
+<body>
+
+    <h1>{% block header %}Polls{% endblock %}</h1>
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>
